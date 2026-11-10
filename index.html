@@ -21,9 +21,20 @@ h1{font-size:clamp(36px,8vw,64px);line-height:1.08;margin:14px 0;color:#fff;text
 @keyframes float{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
 footer{margin-top:35px;color:#d9a7b6;font:12px Arial,sans-serif;letter-spacing:1px}
 </style></head>
-<body><audio autoplay loop controls>
-  <source src="Tujhme Rab Dikhta Hai Ringtone Download Pagalworld.mp3">
+<body><audio id="bg-music" loop style="display:none;">
+  <source src="Tujhme Rab Dikhta Hai Ringtone Download Pagalworld.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+  // Jaise hi user 'Open your surprise' button ya page par click karega, gaana chal padega
+  document.addEventListener('click', function() {
+    var music = document.getElementById('bg-music');
+    if (music.paused) {
+      music.play();
+    }
+  }, { once: true });
+</script>
+  
   <div class="hearts" id="hearts"></div><main>
 <div class="kicker">A little surprise, made with love</div>
 <h1>Happy Birthday<br>Prashant ❤️</h1><div class="date">11 NOVEMBER · YOUR DAY</div>
